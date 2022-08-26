@@ -1,0 +1,112 @@
+﻿@model Modelss.Code.DangKy
+
+@{
+    ViewBag.Title = "DangKi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    
+    
+    <section class="login_part section_padding" style="background:top" >
+            <div class="container" style="margin-top:-200px">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_text text-center">
+                            <div class="login_part_text_iner">
+                                <h2>Xin chào!</h2>
+                                <p>Hãy tiến hành đăng kí tài khoản
+                                    để sử dụng các dịch vụ của chúng tôi</p>
+                                <a href="#" class="btn_3">Đến trang đăng nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_form">
+                            <div class="login_part_form_iner">
+                                <h3>Bạn chưa có tài khoản? <br>
+                                    Hãy điền đầy đủ thông tin</h3>
+                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                    
+                                    
+                                    <div class="editor-label">
+          
+        </div>
+
+
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.tendangnhap,new { @class = "form-control form-control-user" , placeholder="Nhập tên đăng nhập..." })
+            @Html.ValidationMessageFor(model => model.tendangnhap)
+        </div>
+
+  
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.matkhau,new { @class = "form-control form-control-user" , placeholder="Nhập mật khẩu..." })
+            @Html.ValidationMessageFor(model => model.matkhau)
+        </div>
+
+       
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.xacnhanmatkhau,new { @class = "form-control form-control-user" , placeholder="Xác nhận mật khẩu..." })
+            @Html.ValidationMessageFor(model => model.xacnhanmatkhau)
+        </div>
+
+      
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.hoten,new { @class = "form-control form-control-user" , placeholder="Nhập họ và tên..." })
+            @Html.ValidationMessageFor(model => model.hoten)
+        </div>
+
+
+
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.gioitinh,new { @class = "form-control form-control-user" , placeholder="Nhập giới tính..." })
+            @Html.ValidationMessageFor(model => model.gioitinh)
+        </div>
+
+
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.diachi,new { @class = "form-control form-control-user" , placeholder="Nhập địa chỉ..." })
+            @Html.ValidationMessageFor(model => model.diachi)
+        </div>
+
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.sodienthoai,new { @class = "form-control form-control-user" , placeholder="Nhập tên số điện thoại..." })
+            @Html.ValidationMessageFor(model => model.sodienthoai)
+        </div>
+
+
+
+        <div class="editor-field" style="margin-top:20px;">
+            @Html.TextBoxFor(model => model.email,new { @class = "form-control form-control-user" , placeholder="Nhập email..." })
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+     
+
+
+                                    <div class="col-md-12 form-group">
+                                        
+                                        <button type="submit" value="Đăng kí" class="btn_3">
+                                            Đăng kí
+                                        </button>
+                                        <a class="lost_pass" href="#">forget password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    
+    
+
+}
+

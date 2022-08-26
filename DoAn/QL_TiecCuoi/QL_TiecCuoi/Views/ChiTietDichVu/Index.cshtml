@@ -1,0 +1,31 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+@using Modelss.Model;
+
+@model DichVu
+
+<div class="container minheight" >
+    <hr style="width:100%"/>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../Content/hinhanh/anhdichvu/@Model.Anh" width="500" height="300"/>
+        </div>
+        <div class="col-md-6">
+            <p>Mã món ăn: @Model.MaDichVu</p>
+            <h3>Tên sản phẩm: @Model.TenDichVu</h3>
+
+ 
+           @*   @{ Html.RenderAction("layTenMonAn", "ThucDon", new { thucdon = @Model.MaThucDon }); }*@
+            <h4>Giá bán: @Model.GiaTien VND</h4>
+            
+            <a href="@Url.Action("themSanPham", "GioHang", new {masanpham = @Model.MaDichVu })" class="genric-btn primary">Thêm vào giỏ hàng</a>
+             <a href="@Url.Action("them", "HoSoKH", new {mamonan = @Model.MaDichVu })" class="genric-btn success">Thêm vào thực đơn của bạn</a>
+         
+            
+        </div>
+    </div>
+</div>
